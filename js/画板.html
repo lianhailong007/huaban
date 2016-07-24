@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>画板</title>
+	<script src="huaban.js"></script>
+</head>
+<body>
+	<canvas id="can" width=900 height=600 ></canvas>
+	<div class="copy"></div>
+	<input type="color" value="#fff" id="b">
+	<input type="button" value="橡皮擦" id="ear">
+	<style>
+	#can{
+		border: 1px solid #000;
+		display: block;
+		margin: 0 auto;
+	}
+	.copy{
+		width: 100%;
+		height: 600px;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	</style>
+	<script>
+			var copy = document.querySelector(".copy")
+			var c = document.querySelector("#b");
+			var o = new palettle(can.getContext("2d"),can,copy);
+			c.onchange=function(){
+				o.strokeStyle = c.value
+			}
+			o.draw();
+			// o.pencil();
+			ear.onclick=function(){
+				alert(1)
+				o.earser();
+			}
+	</script>
+</body>
+</html>

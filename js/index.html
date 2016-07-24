@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<canvas id="can" width=600 height=600></canvas>
+	<style>
+	#can{
+		border: 1px solid #000;
+	}
+	</style>
+	<script>
+	var o = document.querySelector("#can");
+	var i = o.getContext('2d');
+	i.beginPath();
+	i.lineTo(100,100);
+	i.lineTo(300,100);
+	i.strokeStyle="#f40";
+	i.stroke();
+	i.lineWidth=20;
+	i.lineCap="round";
+	i.closePath();
+	</script>
+</body>
+</html>
